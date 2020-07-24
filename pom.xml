@@ -20,6 +20,13 @@
             <artifactId>javafx-fxml</artifactId>
             <version>14</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.openpnp/opencv -->
+        <dependency>
+            <groupId>org.openpnp</groupId>
+            <artifactId>opencv</artifactId>
+            <version>4.3.0-2</version>
+        </dependency>
+
     </dependencies>
     <build>
         <plugins>
@@ -50,7 +57,8 @@
                         <id>debug</id>
                         <configuration>
                             <options>
-                                <option>-agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=localhost:8000</option>
+                                <option>-agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=localhost:8000
+                                </option>
                             </options>
                         </configuration>
                     </execution>
