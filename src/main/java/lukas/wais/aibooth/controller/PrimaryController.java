@@ -1,4 +1,4 @@
-package lukas.wais.aibooth;
+package lukas.wais.aibooth.controller;
 
 import java.io.IOException;
 import javafx.fxml.FXML;
