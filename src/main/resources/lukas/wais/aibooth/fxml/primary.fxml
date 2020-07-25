@@ -7,13 +7,11 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lukas.wais.aibooth.controller.PrimaryController">
    <bottom>
-      <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-        <items>
-          <Button mnemonicParsing="false" text="Button" />
-            <Button fx:id="button" mnemonicParsing="false" onAction="#startCamera" text="Button" translateX="200.0" />
-            <Button mnemonicParsing="false" text="Button" translateX="400.0" />
-        </items>
-      </ToolBar>
+       <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+           <Button mnemonicParsing="false" text="Button"/>
+           <Button fx:id="button" mnemonicParsing="false" onAction="#startCamera" text="Button" translateX="200.0"/>
+           <Button mnemonicParsing="false" text="Button" translateX="400.0"/>
+       </ToolBar>
    </bottom>
    <center>
       <ImageView fx:id="currentFrame" fitHeight="360.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
