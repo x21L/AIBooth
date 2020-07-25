@@ -18,7 +18,6 @@
     <orderEntry type="library" name="Maven: org.openjfx:javafx-base:mac:14" level="project" />
     <orderEntry type="library" name="Maven: org.openjfx:javafx-fxml:14" level="project" />
     <orderEntry type="library" name="Maven: org.openjfx:javafx-fxml:mac:14" level="project" />
-    <orderEntry type="library" name="Maven: org.openpnp:opencv:4.3.0-2" level="project" />
     <orderEntry type="library" name="Maven: org.openjfx:javafx-swing:11-ea+24" level="project" />
     <orderEntry type="library" name="Maven: org.openjfx:javafx-swing:mac:11-ea+24" level="project" />
   </component>

@@ -5,7 +5,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import org.opencv.core.Core;
 
 import java.io.IOException;
 
@@ -33,8 +32,6 @@ public class App extends Application {
     }
 
     public static void main(String[] args) {
-        // load the native OpenCV library
-        System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
         launch();
     }
 }
