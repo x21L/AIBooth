@@ -37,5 +37,4 @@ public class App extends Application {
         System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
         launch();
     }
-
 }
