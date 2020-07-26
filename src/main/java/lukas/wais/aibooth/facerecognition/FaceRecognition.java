@@ -18,15 +18,16 @@ import org.openimaj.video.capture.VideoCaptureException;
 import java.util.List;
 
 /**
- *
  * @author Lukas Wais
  */
 public class FaceRecognition {
     Video<MBFImage> video;
+    VideoDisplay<MBFImage> display;
 
     public FaceRecognition() {
         try {
-            this.video = new VideoCapture(640,480);
+            this.video = new VideoCapture(640, 480);
+            this.display = VideoDisplay.createVideoDisplay(video);
         } catch (VideoCaptureException ex) {
             System.out.println("Error during video capture \n" + ex.getMessage());
         }
@@ -36,17 +37,16 @@ public class FaceRecognition {
         return video;
     }
 
-    private void play() {
-        VideoDisplay<MBFImage> display = VideoDisplay.createVideoDisplay(video);
+    public VideoDisplay<MBFImage> getDisplay() {
+        return display;
+    }
+
+    public void play() {
         // Video listener
         display.addVideoListener(
                 new VideoDisplayListener<>() {
                     public void beforeUpdate(MBFImage frame) {
-                        /*
-                            Use this for JavaFX
-                            System.out.println(display.getScreen());
-                            System.out.println(display.getDisplayFPS());
-                        */
+
                         FaceDetector<DetectedFace, FImage> fd = new HaarCascadeDetector(40);
                         List<DetectedFace> faces = fd.detectFaces(Transforms.calculateIntensity(frame));
                         for (DetectedFace face : faces) {
@@ -60,8 +60,7 @@ public class FaceRecognition {
     }
 
     public static void main(String[] args) {
-        FaceRecognition application = new FaceRecognition();
-        application.play();
+        new FaceRecognition().play();
     }
 }
 
