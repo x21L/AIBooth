@@ -15,6 +15,7 @@ import org.openimaj.video.VideoDisplayListener;
 import org.openimaj.video.capture.VideoCapture;
 import org.openimaj.video.capture.VideoCaptureException;
 
+import javax.swing.*;
 import java.util.List;
 
 /**
@@ -23,6 +24,15 @@ import java.util.List;
 public class FaceRecognition {
     Video<MBFImage> video;
     VideoDisplay<MBFImage> display;
+
+    public FaceRecognition(JComponent frame) {
+        try {
+            this.video = new VideoCapture(640, 480);
+            this.display = VideoDisplay.createVideoDisplay(video, frame);
+        } catch (VideoCaptureException ex) {
+            System.out.println("Error during video capture \n" + ex.getMessage());
+        }
+    }
 
     public FaceRecognition() {
         try {
